@@ -1,0 +1,17 @@
+{"intents": [
+    {
+      "intent": "MemoryIntent", "slots": [
+        {"name": "number", "type": "AMAZON.NUMBER"},
+        {"name": "thing", "type": "THING"},
+        {"name": "time", "type": "AMAZON.TIME"}
+      ]
+    },
+    {"intent": "ForgetIntent"},
+    {"intent": "TellIntent"},
+    {"intent": "AMAZON.StartOverIntent"},
+    {"intent": "AMAZON.RepeatIntent"},
+    {"intent": "AMAZON.HelpIntent"},
+    {"intent": "AMAZON.StopIntent"},
+    {"intent": "AMAZON.CancelIntent"}
+  ]
+}
