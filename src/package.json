@@ -1,0 +1,30 @@
+{
+  "name": "kleinhirn",
+  "version": "1.0.0",
+  "description": "Ein kleiner Skill der Hilft das Hirn frei zu halten.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/daandi/kleinhirn.git"
+  },
+  "keywords": [
+    "alexa"
+  ],
+  "author": "Andreas Neumann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daandi/kleinhirn/issues"
+  },
+  "homepage": "https://github.com/daandi/kleinhirn#readme",
+  "dependencies": {
+    "alexa-app": "^3.0.0",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "lodash": "^4.17.4",
+    "mocha": "^3.2.0",
+    "request-promise": "^4.1.1"
+  }
+}
