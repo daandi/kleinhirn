@@ -1,6 +1,6 @@
 'use strict';
 var Alexa = require('alexa-sdk');
-var Kleinhirn= require('../lib/kleinhirn');
+var Kleinhirn= require('./lib/kleinhirn');
 
 var APP_ID = "Kleinhirn";
 var hirn = new Kleinhirn();
