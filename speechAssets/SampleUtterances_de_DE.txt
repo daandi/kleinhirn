@@ -1,0 +1,7 @@
+MemoryIntent merke dir {thing}
+MemoryIntent merke dir {number} {thing}
+MemoryIntent merke dir {number} mal {thing}
+ForgetIntent vergiss
+ForgetIntent lösche
+TellIntent erinnere dich
+TellIntent was

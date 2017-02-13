@@ -8,8 +8,6 @@
     },
     {"intent": "ForgetIntent"},
     {"intent": "TellIntent"},
-    {"intent": "AMAZON.StartOverIntent"},
-    {"intent": "AMAZON.RepeatIntent"},
     {"intent": "AMAZON.HelpIntent"},
     {"intent": "AMAZON.StopIntent"},
     {"intent": "AMAZON.CancelIntent"}
