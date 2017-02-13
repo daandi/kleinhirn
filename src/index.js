@@ -35,15 +35,15 @@ var handlers = {
         number : memoryIntent.number.value,
         time : memoryIntent.time.value
       };
-      that.emit(':tell', hirn.remember(memory));
+      this.emit(':tell', hirn.remember(memory));
     },
     'ForgetIntent': function () {
-      that.emit(':tell', hirn.forget());
+      this.emit(':tell', hirn.forget());
 
     },
     'TellIntent': function () {
       var answer = hirn.tell();
-      that.emit(':tellWithCard', answer, that.t("SKILL_NAME"), answer);
+      this.emit(':tellWithCard', answer, this.t("SKILL_NAME"), answer);
     },
     'AMAZON.HelpIntent': function () {
         var speechOutput = this.t("HELP_MESSAGE");
