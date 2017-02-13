@@ -1,20 +1,24 @@
-use 'strict';
+'use strict';
 
-function Kleinhirn() {};
 var store = [];
+function Kleinhirn() {};
 
-PassionSearchClient.prototype.remember = function(memory) {
+Kleinhirn.prototype.remember = function(memory) {
   store.push(memory);
-  retun 'Gemerkt ' + verbalize(memory);
+  return 'Gemerkt ' + verbalize(memory);
 };
 
-PassionSearchClient.prototype.forget = function() {
+Kleinhirn.prototype.forget = function() {
   store = [];
-  retun 'Alles vergessen';
+  return 'Alles vergessen';
 };
 
-PassionSearchClient.prototype.tell = function() {
+Kleinhirn.prototype.tell = function() {
   return store.reduce(verbalizeAll,'');
+};
+
+Kleinhirn.prototype.data = function() {
+  return store;
 };
 
 var verbalizeAll = function(acc, memory) {
@@ -22,17 +26,22 @@ var verbalizeAll = function(acc, memory) {
 }
 
 var verbalize = function(memory) {
+  var number = typeof memory.number !== 'undefined';
+  var thing = typeof memory.thing !== 'undefined';
+  var time = typeof memory.time !== 'undefined';
   var sentence = '';
-  if (typeof memory.number !== 'undefined') {
-    sentence += memory.number + ' mal ';
+  if (number) {
+    sentence += memory.number;
   }
 
-  if (typeof memory.thing !== 'undefined') {
-    sentence += memory.thing + ' ';
+  if (thing) {
+    if (sentence.length > 0) {sentence += ' ';}
+    sentence += memory.thing;
   }
 
-  if (typeof memory.thing !== 'undefined') {
-    sentence += 'um ' + memory.time ;
+  if (time) {
+    if (sentence.length > 0) {sentence += ' um ';}
+    sentence += memory.time ;
   }
 
   return sentence;

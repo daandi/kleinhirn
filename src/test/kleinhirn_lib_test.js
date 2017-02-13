@@ -1,16 +1,25 @@
 'use strict';
+
 var chai = require('chai');
-var chaiAsPromised = require('chai-as-promised');
-chai.use(chaiAsPromised);
 var expect = chai.expect;
-var hirn = require('../lib/kleinhirn');
+chai.config.includeStack = true;
+var Kleinhirn = require('../lib/kleinhirn');
 
 describe('Kleinhirn', function(){
-  var subject = new Kleinhirn();
+  var hirn = new Kleinhirn();
   var memoryThingWithNumber = {thing : 'Bier trinken', number: '5'};
 
-  describe('#verbalize', function(){
-    it('returns a list of hotels', function() {
-      var hotels = subject.getPassion(passion).then( function(obj){
-        return obj.body.aggregations.hotels;
-      });
+  it('rembers a things', function() {
+    hirn.remember(memoryThingWithNumber);
+    console.log(hirn)
+    expect(hirn.data()).to.have.lengthOf(1);
+  });
+  it('forgets things', function() {
+    hirn.forget();
+    expect(hirn.data()).to.have.lengthOf(0);
+  });
+  it('can tell what it rembered', function() {
+    hirn.remember(memoryThingWithNumber);
+    expect(hirn.tell()).to.equal("5 Bier trinken\n");
+  });
+});
