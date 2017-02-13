@@ -30,10 +30,11 @@ var handlers = {
         this.emit('AMAZON.HelpIntent');
     },
     'MemoryIntent': function (memoryIntent) {
+      var intentSlots = this.event.request.intent.slots;
       var memory = {
-        thing : memoryIntent.thing.value,
-        number : memoryIntent.number.value,
-        time : memoryIntent.time.value
+        thing : intentSlots.thing.value,
+        number : intentSlots.number.value,
+        time : intentSlots.time.value
       };
       this.emit(':tell', hirn.remember(memory));
     },
