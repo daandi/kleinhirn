@@ -6,10 +6,10 @@ chai.config.includeStack = true;
 var Kleinhirn = require('../lib/kleinhirn');
 
 describe('Kleinhirn', function(){
-  var hirn = new Kleinhirn();
-  var memoryThingWithNumber = {thing : 'Bier trinken', number: '5'};
+  let hirn = new Kleinhirn();
+  let memoryThingWithNumber = {thing : 'Bier trinken', number: '5'};
 
-  it('rembers a things', function() {
+  it('rembers things', function() {
     hirn.remember(memoryThingWithNumber);
     console.log(hirn)
     expect(hirn.data()).to.have.lengthOf(1);
