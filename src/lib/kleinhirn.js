@@ -1,11 +1,10 @@
 'use strict';
 
-
 class Kleinhirn {
 
   constructor() {
     this.store = [];
-  }
+  };
 
   remember(memory) {
     this.store.push(memory);

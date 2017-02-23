@@ -9,7 +9,7 @@ var languageStrings = {
     "de-DE": {
         "translation": {
             "SKILL_NAME" : "Kleinhirn",
-            "HELP_MESSAGE" : "Ich merke mir kleine Sachen für dich\n" + "Sage Merke dir 42 oder Merke dir 5 Schritte nach osten ",
+            "HELP_MESSAGE" : "Ich merke mir kleine Sachen für dich" + "Sage Merke dir 42 oder Merke dir 5 Schritte nach osten ",
             "HELP_REPROMPT" : "Wie kann ich dir helfen?",
             "STOP_MESSAGE" : "Hirn wird geleert. Servus."
         }
@@ -40,7 +40,6 @@ var handlers = {
     },
     'ForgetIntent': function () {
       this.emit(':tell', hirn.forget());
-
     },
     'TellIntent': function () {
       var answer = hirn.tell();
